@@ -1,7 +1,13 @@
+import { Link } from 'react-router-dom';
+
+
 function HomepageButton ({lobbyOption}) {
     return (
         
-        <button title = "priv/public button"> {lobbyOption.name} </button>
+        
+        <Link to={lobbyOption.name === "Public" ? "/CreateRoom" : "/FindRoom"}>
+            <button title="priv/public button">{lobbyOption.name}</button>
+        </Link>
         
     )
 }
