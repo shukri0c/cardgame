@@ -1,4 +1,4 @@
-function PrivatePage () {
+function CreateRoom () {
     return (
         <>
         <div>
@@ -8,4 +8,4 @@ function PrivatePage () {
     )
 }
 
-export default PrivatePage
+export default CreateRoom

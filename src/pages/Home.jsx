@@ -5,8 +5,8 @@ function Home() {
         <>
         <div> Home Page </div>
         <div>
-            <HomepageButton lobbyOption={{name: "Private"}}/> 
-            <HomepageButton lobbyOption={{name: "Public"}}/> 
+            <HomepageButton lobbyOption={{name: "Create"}}/> 
+            <HomepageButton lobbyOption={{name: "Find"}}/> 
         </div>
         </>
         
@@ -14,3 +14,5 @@ function Home() {
 }
 
 export default Home 
+
+//shld probably change this to create room and find room
