@@ -3,6 +3,11 @@ import Home from './pages/Home'
 import CreateRoom from './pages/CreateRoom'
 import FindRoom from './pages/FindRoom'
 import {Routes, Route} from "react-router-dom"
+import { io } from "socket.io-client";
+
+
+
+const socket = io("http://localhost:3000");
 
 function App() {
   
