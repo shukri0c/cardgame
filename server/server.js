@@ -17,5 +17,4 @@ io.on("connection", (socket) => {
 //deck.shuffle();
 //console.log(deck.cards);
 const GameLogic = require("./managers/GameLogic");
-const startGame = new GameLogic();
-console.log(startGame)
+new GameLogic();

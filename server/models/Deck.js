@@ -5,6 +5,7 @@ class Deck {
         this.cards = [];
         this.createDeck();
         this.drawCard();
+        this.shuffle();
     }
 
     createDeck(){
