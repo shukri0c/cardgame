@@ -6,25 +6,29 @@ class GameLogic {
     constructor(deck){
         this.deck = new Deck();
         this.deck.shuffle();
-        //console.log(this.deck.cards)
-    }
-
-    //i need a way to know how many players there are i think for simplicity ill keep it two players
-    // when i am done with the project i can consider making it more players
-    players = [player1, player2]
-
-
-    // tryna understand stuff ignore ts
-    get randomCard() {
-        const randomIndex = Math.floor(Math.random() * this.deck.cards.length);
-        const card = this.deck.cards[randomIndex]
-        return [card.symbol,card.number]
-        //for (let i = 0; i < this.deck.cards.length; i++) {
-        //console.log(this.deck.cards[i]);
-        //}
+        this.giveCards();
     }
     
-     
+    // ill keep it at 4 players, something to implement later on is choosing the amount of players 
+    
+    // once a player has 4 of the same card its added to their score
+    
+    players = [1,2,3,4];
+    giveCards(){
+        const firstHand = {};
+        for(const player of this.players)
+        {
+            firstHand[player] = [];
+            for (let i = 0; i < 5; i++) {
+                firstHand[player].push(this.deck.drawCard());
+            }
+    
+        }
+        console.log(firstHand)
+    }
+    
+
 }
+
 
 module.exports = GameLogic;
