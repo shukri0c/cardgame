@@ -23,10 +23,13 @@ class Deck {
     }
     // i feel like drawCard is a logic and shouldnt be here. im not sure
     
+    // returns how many cards are in the deck
     get numberOfCards() {
         return this.cards.length
     }
+
     shuffle(){
+        // this is suppsoed to be a perfect shuffle
         for (let i = this.numberOfCards - 1; i > 0; i--)
         {
             const newIndex = Math.floor(Math.random() * (i+1))

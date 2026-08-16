@@ -10,11 +10,12 @@ io.on("connection", (socket) => {
     socket.emit("message", "HIIIII");
 });
 
-const Deck = require("./models/Deck");
-const GameRoomManager = require("./managers/GameRoomManager");
+//const Deck = require("./models/Deck");
+
+
 //const deck = new Deck();
 //deck.shuffle();
 //console.log(deck.cards);
-
-const startGame = new GameRoomManager();
-console.log(startGame.randomCard)
+const GameLogic = require("./managers/GameLogic");
+const startGame = new GameLogic();
+console.log(startGame)
